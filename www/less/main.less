@@ -17,11 +17,7 @@
 @padding: .6em;
 @margin: .6em;
 
-/*
-* Override Bootstrap variables
-*/
-
-@import '/vendors/bootstrap-3.2.0/bootstrap.less';
+@import "partials/normalize.less";
 
 * {
   position: relative;
@@ -29,6 +25,7 @@
 }
 
 body {
+  font-size: 16px;
   color: @grey;
   font-size: @font-size;
   font-weight: 300;
@@ -45,12 +42,17 @@ p, li {
 ul {
   padding-left: 2.75em;
 }
+
+@import "partials/layout.less";
+
 .container {
   max-width: 970px;
   @media (min-width: 768px) {
     width: 100%;
   }
 }
+
+
 header {
   //max-height: 600px;
   overflow: hidden;
@@ -129,7 +131,7 @@ header {
     }
     span {
       display: block;
-      @media screen and (min-width: @screen-md) {
+      @media screen and (min-width: 992px) {
         display: inline;
       }
     }
@@ -400,7 +402,7 @@ footer {
     text-decoration: none;
     text-transform: uppercase;
 
-    @media screen and (min-width: @screen-md) {
+    @media screen and (min-width: 992px) {
       width: 60%;
     }
 
@@ -424,7 +426,7 @@ footer {
   color: @mediumgrey;
   text-transform: uppercase;
 
-  @media screen and (min-width: @screen-md) {
+  @media screen and (min-width: 992px) {
     padding: @padding*4 0;
   }
 }
